@@ -1,0 +1,8 @@
+add_executable(93 93.cpp)
+add_executable(212 212.cpp)
+add_executable(39 39.cpp)
+add_executable(55 55.cpp)
+add_executable(215 215.cpp)
+add_executable(224 224.cpp)
+add_executable(282 282.cpp)
+add_executable(241 241.cpp)
