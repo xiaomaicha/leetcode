@@ -14,9 +14,11 @@ void substr_set_op(string strt, vector<string> out, vector<vector<string>>& res)
         res.push_back(out);
         return;
     } else{
-        for(unsigned int i=1; i<=strt.size();++i){
-//            if(i==0&&strt.size()>=2)
-//                substr_set_op(strt.substr(i+1), out, res);
+        for(unsigned int i=0; i<=strt.size();++i){
+            if(i==0&&strt.size()>=1){
+                substr_set_op(strt.substr(i+1), out, res);
+                continue;
+            }
             string substr = strt.substr(0,i);
             out.push_back(substr);
             substr_set_op(strt.substr(i), out, res);
@@ -36,10 +38,8 @@ int main(){
         getline(cin,nums);
         strs.push_back(nums);
     }
-    cin.get();
+//    cin.get();
     getline(cin,strt);
-
-//    string sub = strt.substr(0,0);
 
     vector<vector<string>> substr_set;
     vector<string> substr;
@@ -51,5 +51,7 @@ int main(){
     return 0;
 
 }
+
+
 
 
