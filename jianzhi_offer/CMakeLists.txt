@@ -1,3 +1,7 @@
 add_executable(32 32.cpp)
 add_executable(33 33.cpp)
 add_executable(38 38.cpp)
+add_executable(44 44.cpp)
+add_executable(45 45.cpp)
+add_executable(46 46.cpp)
+add_executable(47 47.cpp)
