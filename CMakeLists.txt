@@ -7,3 +7,4 @@ add_executable(leetcode main.cpp)
 
 add_subdirectory(leetcode)
 add_subdirectory(bishi)
+add_subdirectory(jianzhi_offer)

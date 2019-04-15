@@ -8,4 +8,6 @@ add_executable(multi_thread multi_thread.cpp)
 
 add_executable(zhaoshang1 zhaoshang1.cpp)
 add_executable(weizhong1 weizhong1.cpp)
+add_executable(jingdong2 jingdong2.cpp)
 add_executable(niuli niuli.cpp)
+add_executable(reference reference.cpp)
