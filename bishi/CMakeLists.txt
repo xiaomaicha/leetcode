@@ -11,3 +11,6 @@ add_executable(weizhong1 weizhong1.cpp)
 add_executable(jingdong2 jingdong2.cpp)
 add_executable(niuli niuli.cpp)
 add_executable(reference reference.cpp)
+
+
+add_executable(matrix_mul matrix_mul.cpp)
