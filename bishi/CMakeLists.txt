@@ -13,3 +13,5 @@ add_executable(niuli niuli.cpp)
 add_executable(reference reference.cpp)
 
 add_executable(xijian3 xijian3.cpp)
+add_executable(server_tcp server_tcp.cpp)
+add_executable(client_tcp client_tcp.cpp)
