@@ -12,4 +12,9 @@ add_executable(jingdong2 jingdong2.cpp)
 add_executable(niuli niuli.cpp)
 add_executable(reference reference.cpp)
 
+
+add_executable(matrix_mul matrix_mul.cpp)
+
 add_executable(xijian3 xijian3.cpp)
+add_executable(xiaoma1 xiaoma1.cpp)
+add_executable(xiaomai3 xiaomai3.cpp)
