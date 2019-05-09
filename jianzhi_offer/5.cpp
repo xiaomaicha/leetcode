@@ -16,26 +16,28 @@ void replacestr(string& data){
         }
     }
     auto it1 = data.end() - 1;
+    unsigned int s_size = data.size();
     for (int i = 0; i < spacecnt; ++i) {
         data.push_back(' ');
         data.push_back(' ');
     }
     auto it2 = data.end() - 1;
-    while (it1 != data.begin()){
+    while (s_size-->0){
         if(*it1 == ' '){
             *it2-- = '0';
             *it2-- = '2';
             *it2-- = '%';
             it1--;
         } else{
-            *it2-- = *it1--;
+            *it2-- = *it1;
+            it1--;
         }
     }
 }
 
 int main(){
-    string data = "i love china";
+    string data = "my name";
     replacestr(data);
-    cout<<endl;
+    cout<<data<<endl;
     return 0;
 }
