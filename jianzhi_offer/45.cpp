@@ -10,6 +10,7 @@
 
 using namespace std;
 
+
 bool compare(int item1, int item2){
     string m = to_string(item1);
     string n = to_string(item2);
@@ -21,7 +22,7 @@ bool compare(int item1, int item2){
 
 string printminnumber(vector<int> &numbers){
     string res;
-    if(numbers.empty())
+  if(numbers.empty())
         return res;
     sort(numbers.begin(), numbers.end(), compare);
 

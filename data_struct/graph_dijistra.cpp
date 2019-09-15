@@ -110,6 +110,26 @@ void dijistra_distance(const unordered_map<int, vector<vector<int >>> &grapgh,
   }
 }
 
+int findPeakElement(vector<int>& nums) {
+  int left = 0;
+  int right = nums.size()-1;
+  while(left < right)
+  {
+    int mid = (left + right)/2;
+    if(nums[mid]>nums[mid+1])
+    {
+      right=mid;
+    }
+    else
+    {
+      left=mid+1;
+    }
+  }
+}
+
+
+
+
 int main(){
   const string INPUT = "7 10\n"
                        "0 1 5\n"

@@ -13,16 +13,16 @@ int inversepaircore(vector<int>& nums, vector<int>& tmp, int start, int end){
         return 0;
     }
 
-    int len = (start + end)/2;
-    int low = inversepaircore(tmp,nums,start,len);
-    int high = inversepaircore(tmp,nums,len+1,end);
+    int mid = (start + end)/2;
+    int low = inversepaircore(tmp,nums,start,mid);
+    int high = inversepaircore(tmp,nums,mid+1,end);
 
-    int i = len,j  = end, index = end;
+    int i = mid,j  = end, index = end;
     int cnt = 0;
-    while (i>=start && j>=len+1){
+    while (i>=start && j>=mid+1){
         if(nums[i]>nums[j]){
             tmp[index--] = nums[i--];
-            cnt += j-len;
+            cnt += j-mid;
         } else{
             tmp[index--] = nums[j--];
         }
@@ -31,7 +31,7 @@ int inversepaircore(vector<int>& nums, vector<int>& tmp, int start, int end){
     for (;i >=start ; --i) {
         tmp[index--] = nums[i];
     }
-    for(; j>=len+1;--j){
+    for(; j>=mid+1;--j){
         tmp[index--] = nums[j];
     }
     return low + high + cnt;

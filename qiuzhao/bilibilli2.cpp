@@ -1,3 +1,8 @@
+
+//
+// Created by Administrator on 2019/9/10.
+//
+
 //
 // Created by Administrator on 2019/4/25 0025.
 //
@@ -6,19 +11,16 @@
 
 using namespace std;
 
-vector<vector<int>> findcontinues(int sum) {
+int findcontinues(int sum) {
   vector<vector<int>> res;
   vector<int> middle_res;
+  int res_num = 0;
 
   int low = 1, high = 2, mid = (1 + sum) >> 1;
   int s = low + high;
   while (low < mid) {
     if (s == sum) {
-      middle_res.clear();
-      for (int i = low; i <= high; ++i) {
-        middle_res.push_back(i);
-      }
-      res.push_back(middle_res);
+      res_num++;
       high++;
       s += high;
     } else if (s < sum) {
@@ -29,14 +31,13 @@ vector<vector<int>> findcontinues(int sum) {
       low++;
     }
   }
-  return res;
+  return res_num + 1;
 }
 
 int main() {
   int num;
   cin >> num;
   auto res = findcontinues(num);
-  cout<<res.size()<<endl;
-  cout << endl;
+  cout<<res<<endl;
   return 0;
 }

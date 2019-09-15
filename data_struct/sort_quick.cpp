@@ -41,7 +41,7 @@ int partition(vector<int> &vec, int low, int high) {
 }
 
 int partition_2(vector<int> &vec, int low, int high) {
-  swap_value(vec[low], vec[high]);
+//  swap_value(vec[low], vec[high]);
   int small = low - 1;
   for (int index = low; index < high; ++index) {
     if (vec[index] < vec[high]) {

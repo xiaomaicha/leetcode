@@ -18,7 +18,7 @@
 #include <vector>
 #include <iostream>
 using namespace std;
-void FindNumsAppearOnce(vector<int> data, int* num1, int *num2);
+void FindNumsAppearOnce(const vector<int>& data, int* num1, int *num2);
 int main() {
     vector<int> data{ 1,1,2,2,3,4,4,5,5,6,6,7 };
     int num1, num2;
@@ -28,7 +28,7 @@ int main() {
     system("pause");
     return 0;
 }
-void FindNumsAppearOnce(vector<int> data, int* num1, int *num2) {
+void FindNumsAppearOnce(const vector<int>& data, int* num1, int *num2) {
     if (data.size() < 2)return;
     *num1 = *num2 = 0;
     int tmp = 0;
